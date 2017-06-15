@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,10 +37,10 @@
 			<div class="modal1">
 				<p class="center">¿Ya tienes una cuenta?</p>
 				<h2>Ingresa Aquí</h2>
-				<form action="./ingresar.php" method="post">
+				<form action="ingresar.php" method="post">
 					<div class="container-form">
-						<input type="text" placeholder="&#xf007; Nombre de Usuario" name="uname" required>
-						<input type="password" placeholder="&#xf13e; Contraseña" name="psw" required>
+						<input id="username" class="input" type="text" value="" placeholder="&#xf007; Nombre de Usuario" name="username" required/>
+						<input id="password" class="input" type="password" value="" placeholder="&#xf13e; Contraseña" name="password" required/>
 						<input type="checkbox" checked="checked"> <strong class="grey">Recordar Usuario</strong>
 					</div>
 					<div class="container-form">

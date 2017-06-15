@@ -1,13 +1,15 @@
 <?php
 	session_start();
-	$nombre = $_POST["uname"];
-	$psw = $_POST["psw"];
 
-	$_SESSION["username"] = $nombre;
-	$_SESSION["password"] = $psw;
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 
-	if( $nombre == "pruebap" && $psw == "prueba123*") {
-		header('Location: http://www.academiaa2.com/moodle');
+	$_SESSION["username"] = $username;
+	$_SESSION["password"] = $password;
+
+	if( $username == "pruebap" && $password == "prueba123*") {
+		setcookie('MoodleSession', 'p32a3ipenqj4q8gdosou47k4m0', time() + 365 * 24 * 60 * 60, '/', 'www.academiaa2.com');
+		header('Location: http://www.academiaa2.com/moodle/');
 	}
 
 ?>
